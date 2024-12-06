@@ -12,6 +12,9 @@ export default {
       },
 
       colors: {
+        'white':'#FFFFFF',
+
+        'red-500':'#8F1919',
         'red-800': '#2C0000',
         'gray-200':'#969494' // Substitua pelo código da sua cor personalizada
       },
