@@ -1,0 +1,23 @@
+.swiper-pagination-bullet-active{
+        background-color: #2C0000;
+        width: 0.60rem;
+        height: 0.60rem;
+}
+
+.swiper{
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    z-index: -1000;
+}
+
+.swiper{
+    width: 100%;
+    height: 390px; 
+    z-index: 1;
+    
+}

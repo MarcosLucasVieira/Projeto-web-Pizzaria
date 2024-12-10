@@ -1,4 +1,4 @@
-import React from "react"; 
+// Componente de Botão Reutilizável
 function Button({ label }: { label: string }) {
     return (
         
@@ -19,6 +19,5 @@ function Button({ label }: { label: string }) {
         </button>
     );
 }
- 
-
 export default Button;
+

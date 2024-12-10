@@ -1,20 +1,17 @@
-
-import './App.css'
-import { Body } from './components/Body'
-import { Footer } from './components/Footer'
-import { Header } from './components/Header'
-import { Sidebar } from './components/Siderbar'
+// App.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Main} from './pages/Main/Main';  // Importe seu componente Main
+import './App.css';
 
 function App() {
-
   return (
-    <>
-        <Header />
-        <Sidebar />
-       <Body />
-       <Footer />
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Defina a rota inicial para o Main */}
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
