@@ -1,5 +1,6 @@
-import { ArrowUUpLeft, Bag, BookBookmark, ChatCircle, Gift, List, Pizza, Star, User, UserCircle } from "phosphor-react";
+import { ArrowUUpLeft, Bag, BookBookmark, ChatCircle, Gift, HouseLine, List, Pizza, Star, User, UserCircle } from "phosphor-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -7,6 +8,8 @@ export function Header() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+
 
   return (
     <>
@@ -66,36 +69,31 @@ export function Header() {
         text-white
         font-bolder 
         ">
-          <li className="mb-4 flex items-center gap-2">
-          <Star className="
-               xs:h-6 w-6
-               sm:h-6 w-6"/>
-            <a href="#">Restaurantes</a>
-          </li>
-          <li className="mb-4 flex items-center gap-2">
-          <ChatCircle className="
-               xs:h-6 w-6
-               sm:h-6 w-6"/>
-            <a href="#">Contatos</a>
-          </li>
-          <li className="mb-4 flex items-center gap-2">
-          <BookBookmark className="
-               xs:h-6 w-6
-               sm:h-6 w-6"/>
-            <a href="#">Reservas</a>
-          </li>
-          <li className="mb-4 flex items-center gap-2">
-          <Pizza className="
-               xs:h-6 w-6
-               sm:h-6 w-6"/>
-            <a href="#">Rodízio</a>
-          </li>
-          <li className="mb-4 flex items-center gap-2">
-          <Gift className="
-               xs:h-6 w-6
-               sm:h-6 w-6"/>
-            <a href="#">Delivery</a>
-          </li>
+          <button className="mb-4 flex items-center gap-2">
+        <HouseLine className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/">Início</Link>
+      </button>
+
+          <button className="mb-4 flex items-center gap-2">
+        <Star className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/restaurante">Restaurantes</Link>
+      </button>
+      <button className="mb-4 flex items-center gap-2">
+        <ChatCircle className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/contatos">Contatos</Link>
+      </button>
+      <button className="mb-4 flex items-center gap-2">
+        <BookBookmark className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/reservas">Reservas</Link>
+      </button>
+      <button className="mb-4 flex items-center gap-2">
+        <Pizza className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/rodizio">Rodízio</Link>
+      </button>
+      <button className="mb-4 flex items-center gap-2">
+        <Gift className="xs:h-6 w-6 sm:h-6 w-6" />
+        <Link to="/delivery">Delivery</Link>
+      </button>
        
         </ul>
 

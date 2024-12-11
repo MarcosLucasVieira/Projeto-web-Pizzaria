@@ -6,7 +6,7 @@
 
 .swiper{
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 .swiper-slide{
@@ -16,8 +16,9 @@
 }
 
 .swiper{
+    margin-top: 2.1rem;
     width: 100%;
-    height: 390px; 
+    height: 450px; 
     z-index: 1;
     
 }
