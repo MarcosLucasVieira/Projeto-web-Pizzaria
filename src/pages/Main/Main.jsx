@@ -1,7 +1,7 @@
 import { SwiperSlide } from "swiper/react";
 import Page from "../../components";
 import { Slider } from '../../components/Slider/Slider'; 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 export function Main() {
     const settings = {
@@ -39,7 +39,7 @@ export function Main() {
         },
         {
           title: "Tradição e Sabor no Rio de Janeiro",
-          imgSrc: "https://images.unsplash.com/photo-1726843268433-63a9ba1b1176?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBpenphcmlhfGVufDB8fDB8fHww",
+          imgSrc: "https://images.unsplash.com/photo-1672596468281-a9ed0f179bbf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           text: "A Pedaço do Céu nasceu no coração da Zona Sul do Rio de Janeiro, trazendo o verdadeiro sabor da tradição italiana. Desde sua inauguração, tornou-se ponto de encontro de famílias e amigos, conquistando corações com suas pizzas artesanais feitas no forno a lenha. Mesmo após tantos anos, permanece no mesmo local, mantendo viva sua essência e qualidade incomparável. Hoje, é um símbolo de tradição e sabor, reconhecido e amado por toda a região. Venha fazer parte dessa história deliciosa!",
           reverseOrder: false,
         }
@@ -50,7 +50,7 @@ export function Main() {
         
         <div className="relative w-full min-h-screen bg-cover bg-center ">
             <div
-                className="absolute inset-0 bg-cover bg-center opacity-40 z-[-1]"
+                className="absolute inset-0 bg-cover bg-center opacity-30 z-[-1]"
                 style={{
                     backgroundImage: `url(https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
                 }}
@@ -180,8 +180,9 @@ export function Main() {
                     {section.reverseOrder ? (
                        <>
                        <div className="flex items-center justify-center lg:h-1/2">
-                         <p className="text-center font-light sm:text-sm lg:text-lg">{section.text}</p>
-                       </div>
+                       <div className="flex items-center justify-center w-full lg:w-1/2">
+                        <p className="text-center font-light sm:text-sm lg:text-lg">{section.text}</p>
+                        </div>                       </div>
                        <img
                          src={section.imgSrc}
                          className="w-full lg:w-1/2 h-32 lg:h-auto rounded-lg object-cover object-bottom lg:h-62 "
@@ -190,7 +191,9 @@ export function Main() {
                     ) : (
                         <>
                         <img src={section.imgSrc} className="w-full lg:w-1/2 h-32 lg:h-auto rounded-lg object-cover object-bottom lg:h-52" />
-                        <p className="lg:w-1/2 text-center font-lighter sm:text-sm lg:text-lg">{section.text}</p>
+                        <div className="flex items-center justify-center w-full lg:w-1/2">
+                        <p className="text-center font-light sm:text-sm lg:text-lg">{section.text}</p>
+                        </div>
                         </>
                     )}
                     </div>

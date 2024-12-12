@@ -1,4 +1,4 @@
-import { ArrowUUpLeft, Bag, BookBookmark, ChatCircle, Gift, HouseLine, List, Pizza, Star, User, UserCircle } from "phosphor-react";
+import { ArrowUUpLeft, Bag, BookBookmark, Gift, HouseLine, List, Pizza, Star, User, UserCircle } from "phosphor-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,12 +19,14 @@ export function Header() {
         </button>
         <h1 className="text-white xs:text-xs sm:text-sm underline">Pedacinho do céu</h1>
         <div className="flex gap-2">
-          <a className="text-white" href="http://">
-            <User />
-          </a>
-          <a className="text-white" href="http://">
-            <Bag />
-          </a>
+          <button className="text-white lg:hideen" >
+           <Link to='/login' > <User /> </Link>
+          </button>
+
+
+         <button className="text-white" href="http://">
+           <Link to='/carrinho' > <Bag /> </Link>
+          </button>
         </div>
       </div>
 
@@ -42,6 +44,7 @@ export function Header() {
           xs: w-6  h-6 mr-4
           sm: w-11 h-11 mr-4 
           " />
+          
           <p className="
           xs: text-xs
           sm:text-lg
@@ -77,10 +80,6 @@ export function Header() {
           <button className="mb-4 flex items-center gap-2">
         <Star className="xs:h-6 w-6 sm:h-6 w-6" />
         <Link to="/restaurante">Restaurantes</Link>
-      </button>
-      <button className="mb-4 flex items-center gap-2">
-        <ChatCircle className="xs:h-6 w-6 sm:h-6 w-6" />
-        <Link to="/contatos">Contatos</Link>
       </button>
       <button className="mb-4 flex items-center gap-2">
         <BookBookmark className="xs:h-6 w-6 sm:h-6 w-6" />
