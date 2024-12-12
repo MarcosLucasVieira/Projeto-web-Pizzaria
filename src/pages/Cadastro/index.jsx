@@ -58,7 +58,7 @@ export function Login() {
                     <div
                         className={`hidden lg:flex w-11/12 h-96 ml-auto items-center justify-center flex-col transition-all duration-500 ease-in-out ${
                             isAnimating
-                                ? "rounded-l-lg transform translate-x-[-110%] w-3/4 bg-gradient-to-r from-red-800 to-red-400"
+                                ? "rounded-l-lg transform translate-x-[-110%] w-11/12 bg-gradient-to-r from-red-800 to-red-400"
                                 : "bg-red-800"
                         } z-30 relative`}
                     >
